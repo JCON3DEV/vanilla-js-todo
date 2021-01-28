@@ -17,7 +17,7 @@ function addTodo(event){
 
   // CREATE LI
   const newTodo = document.createElement("li");
-  newTodo.innerText = "hey";
+  newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   // CREATES;  <li class="todo-item">hey</li>
   todoDiv.appendChild(newTodo);
@@ -37,6 +37,9 @@ function addTodo(event){
   // APPEND TO TODO LIST
   todoList.appendChild(todoDiv);
 
+  // CLEAR Todo INPUT VALUE
+  todoInput.value ="";
+
   console.log("success meatbag");
   // creates; <div class="todo">
   //            <li class="todo-item">hey</li>
@@ -44,4 +47,3 @@ function addTodo(event){
   //            <button class="trashButton"></button>
   //          </div>
 }
-// 23.45

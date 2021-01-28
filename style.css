@@ -53,7 +53,7 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  /* min-width: 30%; */
   list-style: none;
 }
 
@@ -70,6 +70,10 @@ form button:hover {
 .todo li {
   /* pushes all the bottons to the far end */
   flex:1;
+}
+
+.todo-item {
+  padding: 0 0.5rem;
 }
 
 .trash-button,
