@@ -88,3 +88,9 @@ form button:hover {
 .complete-button {
   background-color: rgb(78, 207, 117);
 }
+
+/* below removes popinter events eg; 'click' event */
+.fa-trash,
+.fa-check {
+  pointer-events:none;
+}
