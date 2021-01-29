@@ -65,6 +65,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s ease;
 }
 
 .todo li {
@@ -87,6 +88,17 @@ form button:hover {
 
 .complete-button {
   background-color: rgb(78, 207, 117);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transition: all 0.5sec ease;
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
 }
 
 /* below removes popinter events eg; 'click' event */

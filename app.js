@@ -57,7 +57,11 @@ function deleteCheck(e){
   if (item.classList[0] === "trash-button") {
     console.log("bingo");
     const todo = item.parentElement;
-    todo.remove();
+    //  ANIMATION
+    todo.classList.add("fall");
+    todo.addEventListener('transitionend', function(){
+      todo.remove();
+    })
   }
 
   // CHECK MARK
@@ -68,3 +72,4 @@ function deleteCheck(e){
   }
 
 }
+// 37.24
