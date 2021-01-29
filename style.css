@@ -106,3 +106,48 @@ form button:hover {
 .fa-check {
   pointer-events:none;
 }
+
+/* removing syles from select tag */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+}
+
+select, option {
+  color: #ec7b5b;
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.select::after {
+  /* Below is the down arrow icon */
+  content: "\25BC";
+  position: absolute;
+  background: #ec7b5b;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  /* Below allows the arrow to be clicked on */
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #ec7b5b;
+}
+
+
+
+
+

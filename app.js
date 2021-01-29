@@ -70,6 +70,4 @@ function deleteCheck(e){
     todo.classList.toggle('completed')
 
   }
-
 }
-// 37.24
