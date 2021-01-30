@@ -11,9 +11,9 @@ Look how easy it is to use:
     project.do_stuff()
 
 ## still todo
-Refactor code.
-Improve styling
-Write README
+Refactor code.<br>
+Improve styling.<br>
+Write README.<br>
 Consider adding seperate local storage for completed todos
 
 Features
