@@ -1,3 +1,5 @@
+// update = refactor code to remove the todo check
+
 // Selectors
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
@@ -49,7 +51,7 @@ function addTodo(event){
   // CLEAR Todo INPUT VALUE
   todoInput.value ="";
 
-  console.log("success meatbag");
+  // console.log("success meatbag");
   // creates; <div class="todo">
   //            <li class="todo-item">hey</li>
   //            <button class="completedButton"></button>
@@ -58,15 +60,15 @@ function addTodo(event){
 };
 
 function deleteCheck(e){
-  console.log(e.target);
+  // console.log(e.target);
   const item = e.target;
-  console.log(item.classList);
+  // console.log(item.classList);
   //  DELETE TODO 
   if (item.classList[0] === "trash-button") {
-    console.log("bingo");
     const todo = item.parentElement;
     //  ANIMATION
     todo.classList.add("fall");
+    removeLocalTodos(todo);
     todo.addEventListener('transitionend', function(){
       todo.remove();
     })
@@ -86,7 +88,7 @@ function filterTodo(e) {
   // This is the wizzardry;
   todos.forEach(function(todo){
     // e.target.value will be either; all / completed / uncompleted
-    console.log("this it todo", todo);
+    // console.log("this is todo", todo);
     if (todo.classList !== undefined) {
 
       switch(e.target.value){
@@ -170,4 +172,26 @@ function getTodos(){
     // APPEND TO TODO LIST
     todoList.appendChild(todoDiv);
   })
+}
+
+function removeLocalTodos(todo){
+  // check if there are things already there
+  let todos;
+  // below checks if we hve any
+  if (localStorage.getItem("todos") === null) {
+    // if not creates an array
+    todos = [];
+  } else {
+    //  passes back the array from local storage
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  // console.log("This is removeLocalTodos;", todo.children[0].innerText);
+  const todoIndexContent = todo.children[0].innerText;
+  // console.log(typeof todoIndexContent);
+  // console.log("Index of deleted;", todoIndex);
+  const todoIndex = todos.indexOf(todoIndexContent);
+  // console.log("this is todoIndex:", todoIndex);
+  todos.splice(todoIndex, 1);
+  localStorage.setItem("todos", JSON.stringify(todos));
+
 }
