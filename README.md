@@ -10,6 +10,12 @@ Look how easy it is to use:
     # Get your stuff done
     project.do_stuff()
 
+## still todo
+Refactor code.
+Improve styling
+Write README
+Consider adding seperate local storage for completed todos
+
 Features
 --------
 
