@@ -14,6 +14,7 @@ Look how easy it is to use:
 Refactor code.<br>
 Improve styling.<br>
 Write README.<br>
+Consider adding seperate local storage for completed todos
 
 
 Features
